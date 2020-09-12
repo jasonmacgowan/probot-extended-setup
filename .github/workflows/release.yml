@@ -1,11 +1,11 @@
-name: Publish
+name: release
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build:
+  semantic-release:
     runs-on: ubuntu-latest
 
     steps:

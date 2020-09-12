@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "description": "Web editor for configuring Probot apps",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "Jason Macgowan <1389531+jasonmacgowan@users.noreply.github.com>",
   "license": "ISC",
   "repository": "https://github.com/jasonmacgowan/probot-extended-setup.git",
@@ -15,6 +17,8 @@
   ],
   "scripts": {
     "build": "tsc",
+    "clean": "rimraf ./lib",
+    "prepublishOnly": "npm run clean && npm run build",
     "start": "probot run ./lib/index.js",
     "test": "jest"
   },
@@ -30,6 +34,7 @@
     "eslint-plugin-typescript": "^0.14.0",
     "jest": "^26.4.0",
     "nock": "^13.0.4",
+    "rimraf": "^3.0.2",
     "smee-client": "^1.1.0",
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
@@ -44,5 +49,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "files": [
+    "lib",
+    "views"
+  ]
 }

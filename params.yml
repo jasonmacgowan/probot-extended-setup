@@ -1,0 +1,14 @@
+---
+- name: Webhook proxy url
+  env: WEBHOOK_PROXY_URL
+
+- name: Webhook secret
+  env: WEBHOOK_SECRET
+  inputType: password
+
+- name: App id
+  env: APP_ID
+
+- name: Private key
+  env: PRIVATE_KEY
+  inputType: textarea

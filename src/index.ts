@@ -1,5 +1,5 @@
 import { Application } from "probot";
 
 export = (app: Application): void => {
-  app.log("Not implemented.");
+  app.log("Not implemented!");
 };

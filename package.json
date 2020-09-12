@@ -1,7 +1,6 @@
 {
   "name": "probot-extended-setup",
-  "version": "0.0.0-development",
-  "private": true,
+  "version": "0.1.0",
   "description": "Web editor for configuring Probot apps",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

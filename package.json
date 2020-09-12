@@ -1,6 +1,6 @@
 {
   "name": "probot-extended-setup",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "private": true,
   "description": "Web editor for configuring Probot apps",
   "main": "lib/index.js",
@@ -22,7 +22,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "start": "probot run ./lib/index.js",
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "probot": "^10.1.0"
@@ -46,7 +47,8 @@
     "rimraf": "^3.0.2",
     "smee-client": "^1.1.0",
     "ts-jest": "^26.2.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "semantic-release": "^17.1.1"
   },
   "engines": {
     "node": ">= 10.13.0"

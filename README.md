@@ -17,7 +17,7 @@
 
 ### Install
 
-```sh
+```Bash
 # Install dependencies
 npm install probot-extended-setup
 ```
@@ -44,7 +44,7 @@ See [params.yml](params.yml) for a simple example.
 
 Add `probot-extended-setup` to your Probot App
 
-```
+```JavaScript
 const ExtendedSetup = require('probot-extended-setup');
 
 /**

@@ -9,6 +9,10 @@
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that provides a web editor for configuring Probot apps
 
+<p align="center">
+  <img alt="probot-extended-setup web ui" src="docs/img/setup.png">
+</p>
+
 ## Getting started
 
 ### Install
@@ -35,6 +39,34 @@ See [params.yml](params.yml) for a simple example.
   - `password` masks input
   - `checkbox` supports `true`/`false` values
   - `textarea` multi-line text input control
+
+### Load the plugin
+
+Add `probot-extended-setup` to your Probot App
+
+```
+const ExtendedSetup = require('probot-extended-setup');
+
+/**
+ * This is the main entrypoint to your Probot app
+ * @param {import('probot').Application} app
+ */
+module.exports = (app) => {
+  app.load(ExtendedSetup);
+
+  // your Probot App code here
+}
+```
+
+### Using the editor
+
+1. Start your application and navigate to [https://127.0.0.1:3000/probot/setup/extended](https://127.0.0.1:3000/probot/setup/extended).
+2. Edit your application configuration in the web form then save it.
+3. `probot-extended-setup` merges your changes into your existing config and saves it to `.env` in the root directory.
+
+### Reading the config
+
+The Probot framework automatically loads the contents of `.env` into the environment variables for your app's running process. You can access them in your code by accessing `process.env.<PARAMETER_NAME>`, i.e. `process.env.APP_ID`
 
 ## Contributing
 

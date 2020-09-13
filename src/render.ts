@@ -2,17 +2,23 @@ import fs from "fs";
 import handlebars from "handlebars";
 import path from "path";
 
+type Context = {
+  [key: string]: unknown;
+};
+
 /**
- * TODO
+ * Load a view by name from the `views` directory.
  *
- * @param {string} name
+ * @param {string} name basename for view
+ * @returns {string} full path to template
  */
 export const load = (name: string): string => {
   return fs.readFileSync(path.join(__dirname, "..", "views", `${name}.hbs`), "utf-8");
 };
 
 /**
- * TODO
+ * Simple map that connects HTML input types to handlebars partials that
+ * live in `views/partials/form
  */
 const partials: {
   [key: string]: string[];
@@ -24,7 +30,8 @@ const partials: {
 };
 
 /**
- * TODO
+ * Register each partial in the map above to Handlebars so we can use them
+ * in our templates
  */
 for (const partial in partials) {
   for (const type of partials[partial]) {
@@ -33,12 +40,13 @@ for (const partial in partials) {
 }
 
 /**
- * TODO
+ * Render a view by name with a given context.
  *
- * @param {string} name
- * @param {object} context
+ * @param {string} name basename for view
+ * @param {Context} context vars to render with
+ * @returns {string} the rendered template
  */
-export const render = (name: string, context: { [key: string]: unknown }): string => {
+export const render = (name: string, context: Context): string => {
   const template = handlebars.compile(load(name), { preventIndent: true });
   return template(context);
 };

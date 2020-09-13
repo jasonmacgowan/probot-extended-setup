@@ -16,7 +16,14 @@
     <div class="box-shadow rounded-2 border p-6 bg-white">
       <h1>Configuration editor</h1>
 
+      {{#if message}}
+      <div class="flash {{#if message.level}}mt-3 flash-{{message.level}}{{/if}}">
+        {{message.text}}
+      </div>
+      {{/if}}
+
       <div class="text-left mt-6">
+        {{#if fields}}
         <form method="POST">
           {{#each fields}}
           {{> (lookup . 'inputType') }}
@@ -27,14 +34,12 @@
             <button type="button" class="btn" onclick="location.reload(true);">Cancel</button>
           </div>
         </form>
-      </div>
-    </div>
-
-    <div class="mt-4">
-      <h4 class="alt-h4 text-gray-light">Need help?</h4>
-      <div class="d-flex flex-justify-center mt-2">
-        <a href="https://probot.github.io/docs/" class="btn btn-outline mr-2">Documentation</a>
-        <a href="https://probot-slackin.herokuapp.com/" class="btn btn-outline">Chat on Slack</a>
+        {{else}}
+        <div class="blankslate">
+          <h3 class="mb-1">You don’t seem to have any parameters defined.</h3>
+          <p>Create a file named <code>params.yml</code> in the root directory for this app.</p>
+        </div>
+        {{/if}}
       </div>
     </div>
   </div>

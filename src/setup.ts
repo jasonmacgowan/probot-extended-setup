@@ -11,8 +11,15 @@ type Param = {
   [key: string]: unknown;
 };
 
+type Config = {
+  [key: string]: string;
+};
+
 /**
- * TODO
+ * Read `params.yml` in the root directory of the current Probot app and
+ * set a default `inputType` if it doesn't already exist.
+ *
+ * @param {string} defaultType use this HTML input type when not defined
  */
 export function readParams(defaultType = "text"): Param[] {
   let params;
@@ -26,16 +33,17 @@ export function readParams(defaultType = "text"): Param[] {
       }
     }
   } catch {
-    params = {};
+    params = [];
   }
 
   return params;
 }
 
 /**
- * TODO
+ * Read current configuration from `.env` in the root directory of the current
+ * Probot app.
  */
-export function readConfig(): { [key: string]: string } {
+export function readConfig(): Config {
   let config;
 
   try {
@@ -48,11 +56,11 @@ export function readConfig(): { [key: string]: string } {
 }
 
 /**
- * TODO
+ * Write the supplied config to disk on `.env`.
  *
- * @param config
+ * @param {Config} config the current config
  */
-export function writeConfig(config: { [key: string]: string }): void {
+export function writeConfig(config: Config): void {
   if (Object.prototype.hasOwnProperty.call(config, "PRIVATE_KEY")) {
     config["PRIVATE_KEY"] = `"${config["PRIVATE_KEY"]}"`;
   }
@@ -65,9 +73,10 @@ export function writeConfig(config: { [key: string]: string }): void {
 }
 
 /**
- * TODO
+ * Read the current params and config, and combine them for use
+ * in the web editor
  */
-export function readFields() {
+export function readFields(): Param[] {
   const params = readParams();
   const config = readConfig();
 

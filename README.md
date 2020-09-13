@@ -4,7 +4,7 @@
   <a href="https://github.com/jasonmacgowan/probot-extended-setup/actions?query=workflow%3ACI"><img alt="GitHub Actions" src="https://github.com/jasonmacgowan/probot-extended-setup/workflows/CI/badge.svg"></a>
   <a href="https://github.com/semantic-release/semantic-release"><img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg"></a>
   <a href="https://npmjs.com/package/probot-extended-setup"><img src="https://badgen.net/npm/v/probot-extended-setup" alt="npm"></a>
-  <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="commitizen friendly>
+  <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="commitizen friendly">
 <p>
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that provides a web editor for configuring Probot apps

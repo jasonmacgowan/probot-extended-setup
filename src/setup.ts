@@ -33,7 +33,7 @@ export function readParams(defaultType = "text"): Param[] {
       }
     }
   } catch {
-    params = {};
+    params = [];
   }
 
   return params;

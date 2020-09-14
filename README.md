@@ -33,6 +33,7 @@ See [params.yml](params.yml) for a simple example.
 `params.yml` is written as an top-level array, with each element supporting these options:
 
 - `name` - required - a friendly name for the parameter
+- `description` - optional - a terse representation of what this parameter is used for that is shown as a tooltip in the editor
 - `env` - required - the environment variable key that will be used when saving and loading this paramter to `.env`
 - `inputType` - optional, defaults to `text` - the HTML input type to render this paramter's value with. Supported values below:
   - `text` default input control

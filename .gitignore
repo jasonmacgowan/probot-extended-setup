@@ -1,6 +1,7 @@
 !mock-cert.pem
 .DS_Store
 .env
+.token
 *.pem
 coverage
 lib

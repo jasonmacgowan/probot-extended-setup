@@ -1,7 +1,8 @@
-node_modules
-npm-debug.log
-*.pem
 !mock-cert.pem
+.DS_Store
 .env
+*.pem
 coverage
 lib
+node_modules
+npm-debug.log

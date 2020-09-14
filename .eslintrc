@@ -10,5 +10,6 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "github"],
-  "rules": {}
+  "rules": {},
+  "ignorePatterns": ["bin/*.js"]
 }

@@ -4,6 +4,9 @@
   "description": "Web editor for configuring Probot apps",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "bin": {
+    "pes-generate-token": "./bin/token.js"
+  },
   "author": "Jason Macgowan <1389531+jasonmacgowan@users.noreply.github.com>",
   "license": "ISC",
   "repository": "https://github.com/jasonmacgowan/probot-extended-setup.git",

@@ -16,8 +16,9 @@ export const generateToken = (): string => {
 /**
  * Write a given token to the default tokenfile location
  */
-export const writeToken = (token: string): void => {
+export const writeToken = (token: string): string => {
   fs.writeFileSync(tokenPath, token);
+  return tokenPath;
 };
 
 /**

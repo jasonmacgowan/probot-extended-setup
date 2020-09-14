@@ -29,6 +29,8 @@
     "dotenv": "^8.2.0",
     "handlebars": "^4.7.6",
     "js-yaml": "^3.14.0",
+    "omgopass": "^3.2.1",
+    "password-generator": "^2.3.2",
     "probot": "^10.1.0"
   },
   "devDependencies": {

@@ -4,6 +4,9 @@
   "description": "Web editor for configuring Probot apps",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "bin": {
+    "pes-generate-token": "./bin/token.js"
+  },
   "author": "Jason Macgowan <1389531+jasonmacgowan@users.noreply.github.com>",
   "license": "ISC",
   "repository": "https://github.com/jasonmacgowan/probot-extended-setup.git",
@@ -27,11 +30,15 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
+    "express-session": "^1.17.1",
     "handlebars": "^4.7.6",
     "js-yaml": "^3.14.0",
+    "omgopass": "^3.2.1",
+    "password-generator": "^2.3.2",
     "probot": "^10.1.0"
   },
   "devDependencies": {
+    "@types/express-session": "^1.17.0",
     "@types/jest": "^26.0.9",
     "@types/js-yaml": "^3.12.5",
     "@types/nock": "^11.1.0",

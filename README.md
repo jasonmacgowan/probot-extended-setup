@@ -65,6 +65,12 @@ module.exports = (app) => {
 2. Edit your application configuration in the web form then save it.
 3. `probot-extended-setup` merges your changes into your existing config and saves it to `.env` in the root directory.
 
+### Access control
+
+Access to the configuration editor is restricted to `localhost`.
+
+You can also access the editor by supplying a generated token that can be found in the startup logs and `<rootDir>/.token`.
+
 ### Reading the config
 
 The Probot framework automatically loads the contents of `.env` into the environment variables for your app's running process. You can access them in your code by accessing `process.env.<PARAMETER_NAME>`, i.e. `process.env.APP_ID`

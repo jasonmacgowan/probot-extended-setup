@@ -1,5 +1,6 @@
 ---
 - name: Webhook proxy url
+  description: Go to https://smee.io/new set this to the URL that you are redirected to.
   env: WEBHOOK_PROXY_URL
 
 - name: Webhook secret
@@ -7,6 +8,7 @@
   inputType: password
 
 - name: App id
+  description: The ID of your GitHub App
   env: APP_ID
 
 - name: Private key

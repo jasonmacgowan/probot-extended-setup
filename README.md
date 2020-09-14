@@ -1,4 +1,6 @@
-# probot-extended-setup
+<h1 align="center">Probot Extended Setup</h1>
+
+<p align="center">A GitHub App built with <a href="https://github.com/probot/probot">Probot</a> that provides a web editor for configuring Probot apps</p>
 
 <p align="center">
   <a href="https://github.com/jasonmacgowan/probot-extended-setup/actions?query=workflow%3ACI"><img alt="GitHub Actions" src="https://github.com/jasonmacgowan/probot-extended-setup/workflows/CI/badge.svg"></a>
@@ -6,8 +8,6 @@
   <a href="https://npmjs.com/package/probot-extended-setup"><img src="https://badgen.net/npm/v/probot-extended-setup" alt="npm"></a>
   <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="commitizen friendly">
 <p>
-
-> A GitHub App built with [Probot](https://github.com/probot/probot) that provides a web editor for configuring Probot apps
 
 <p align="center">
   <img alt="probot-extended-setup web ui" src="docs/img/setup.png">
@@ -33,6 +33,7 @@ See [params.yml](params.yml) for a simple example.
 `params.yml` is written as an top-level array, with each element supporting these options:
 
 - `name` - required - a friendly name for the parameter
+- `description` - optional - a terse representation of what this parameter is used for that is shown as a tooltip in the editor
 - `env` - required - the environment variable key that will be used when saving and loading this paramter to `.env`
 - `inputType` - optional, defaults to `text` - the HTML input type to render this paramter's value with. Supported values below:
   - `text` default input control

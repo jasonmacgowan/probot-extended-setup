@@ -16,6 +16,9 @@ export const load = (name: string): string => {
   return fs.readFileSync(path.join(__dirname, "..", "views", `${name}.hbs`), "utf-8");
 };
 
+// register helper partials here
+handlebars.registerPartial("tooltip", load("partials/form/tooltip"));
+
 /**
  * Simple map that connects HTML input types to handlebars partials that
  * live in `views/partials/form
